@@ -13,4 +13,11 @@ public class CashbackHackServiceTest {
         int expected = 1;
         Assert.assertEquals(actual, expected);
     }
+    @Test // кешбек начисляется при покупке в 1000 р.
+    public void testRemain() {
+        CashbackHackService service = new CashbackHackService();
+        int actual = service.remain(1000);
+        int expected = 0;
+        Assert.assertEquals(actual, expected);
+    }
 }
